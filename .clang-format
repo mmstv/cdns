@@ -1,0 +1,17 @@
+# /usr/bin/clang-format file.in > file.out
+# See current formatting issues:
+#    /usr/bin/git clang-format --diff
+# In Vim:
+#    autocmd FileType c,cpp :setlocal formatprg=clang-format
+
+BasedOnStyle:    WebKit  #  LLVM, Google, Chromium, Mozilla, WebKit
+UseTab:          Always  # Never, Always, ForIndentation
+IndentWidth:     4
+TabWidth:        4
+
+ColumnLimit:     84
+BreakBeforeBraces: Allman # Attach, Stroustrup, Linux, GNU
+SpaceBeforeParens: Always # Never,  ControlStatements
+PointerAlignment: Right # Left, Right, Middle
+NamespaceIndentation: None # Inner
+# SpacesInAngles:  true

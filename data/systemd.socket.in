@@ -1,0 +1,9 @@
+[Unit]
+Description=@PROJECT_NAME@ listener
+
+[Socket]
+ListenStream=127.0.0.1:53
+ListenDatagram=127.0.0.1:53
+
+[Install]
+WantedBy=sockets.target

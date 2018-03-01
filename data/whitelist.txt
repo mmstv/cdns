@@ -1,0 +1,383 @@
+##
+## whitelisted domains and hosts, anything not in the list will be blocked
+
+localhost localhost.localdomain nowhere broadcast *.local
+
+# reverse DNS : /usr/bin/drill -x
+# ?? 127.0.0.1.in-addr.arpa
+*.in-addr.arpa
+
+# Internet, WARNING!!! IANA is silently used by Apple MacOS!!!
+.whois.arin.net *.whois.lacnic.net *.whois.apnic.net .rwhois.rr.com .whois.ripe.net
+*.whois.pir.org *.ntp.org *.data.iana.org *.www.iana.org
+
+# News
+*.rt.com *.ria.ru *.nytimes.com *.nyt.com *.washingtonpost.com *.lenta.ru
+*.sports.ru .theintercept.com .theintercept.org *.livejournal.com *.livejournal.ru
+*.reddit.com *.redditstatic.com *.micahflee.com *.medium.com *.bbc.co.uk .npr.org
+.vice.com .politico.com .bloomberg.com .blogspot.co.uk .blogspot.ro .theinquirer.net
+*.yahoo.com *.twitter.com *.pbs.twimg.com *.abs.twimg.com
+
+## Tech News
+.habrahabr.ru .habrastorage.org *.hsto.org *.xakep.ru *.techcrunch.com
+.geekwire.com *.wired.com *.news.ycombinator.com *.technologyreview.com
+*.serverfault.com *.arstechnica.com *.arstechnica.net *.hackforums.net *.pcworld.com
+*.laptopmag.com *.techlightspeed.com *.osdir.com *.onthewire.io *.thehackernews.com
+*.megamozg.ru *.geektimes.ru *.links.twibright.com .motherboard.vice.com
+.virtuousgeek.org .superuser.com .indiangeek.net .geeksforgeeks.org .anandtech.com
+*.geeks3d.com *.ghacks.net .freedomhacker.net opensourceandhackystuff.blogspot.com
+opensourceandhackystuff.blogspot.nl opensourceandhackystuff.blogspot.ro
+blog.rootshell.be *.admin-magazine.com
+
+## Science News
+.arxiv.org .nature.com .mit.edu .nist.gov .sci-hub.cc .sci-hub.ac .sci-hub.io
+*.sciencealert.com
+
+# Security
+*.eff.org *.coresecurity.com *.defcon.ru *.leakedsource.com *.threatpost.ru
+*.hackernoon.com *.privacytools.io *.sks-keyservers.net *.gnupg.net
+.securityfocus.com *.securitytracker.com *.cvedetails.com .gnutls.org .schneier.com
+*.zerodayinitiative.com *.keepersecurity.com *.openssl.org *.wilderssecurity.com
+*.aircrack-ng.org .cryptologie.net *.browsec.com *.prostovpn.org reqrypt.org
+www.reqrypt.org *.stealthed.xyz xerozipzvbwv7j6v.onion *.proxylists.me
+*.dnscrypt.org *.seclists.org *.krebsonsecurity.com
+*.offensive-security.com
+
+# Computing
+*.github.com *.githubusercontent.com *.github.io *.bitbucket.org *.git.code.sf.net
+*.stackexchange.com *.kernel.org *.stackoverflow.com *.gnu.org .cplusplus.com
+.cplusplus.org .cppreference.com .isocpp.org *.ceres-solver.org *.openclblog.com
+www.tcpipguide.com .codeproject.com
+
+# Search
+*.duckduckgo.com *.search.disconnect.me *.3g2upl4pq6kufc4m.onion *.archive.is
+*.archive.org *.duck.co
+
+## hidden duck links to icons on non-hidden duck
+*.icons.duckduckgo.com
+
+# Wiki
+*.wikipedia.org *.wikidevi.com .wikimedia.org .kiwix.org .openzim.org *.wikileaks.org
+
+# Books
+*.bell-labs.com *.belllabs.com *.knowfree.net *.techbooksforfree.com
+*.freebookcentre.net *.wikibooks.org *.mindview.net *.bookfi.net
+*.onlinecomputerbooks.com *.faqs.org *.williamspublishing.com *.litres.ru
+flibustahezeous3.onion *.flibusta.is *.flibusta.lib *.booktracker.org
+*.bukvaved.com
+
+# Linux/UNIX
+*.archlinux.org *.fedoraproject.org *.debian.org *.debian.net *.freebsd.org
+*.openbsd.org *.alipinelinux.org *.kali.org *.boum.org *.riseup.net
+*.nzh3fv6jc6jskki3.onion *.linux.com *.redhat.com *.ubuntumanual.org
+.endlessos.com .endlessm.com
+*.grsecurity.net
+*.x.org *.freedesktop.org *.askubuntu.com *.linuxfromscratch.org *.ubuntuforums.org
+*.linuxquestions.org *.gentoo.org *.i3wm.org *.usenix.org *.distrowatch.com
+*.ubuntulinux.org *.ubuntu.com *.whonix.org *.centos.org *.centoshowtos.org
+*.redhat.com *.qubes-os.org *.linuxwireless.org *.zen-kernel.org *.linuxjournal.com
+*.linux.no *.linuxcenter.ru *.download.gnome.org *.git.gnome.org *.download.kde.org
+*.download.qt.io *.opengl.org *.khronos.org *.openwrt.org *.kalitutorials.net
+*.atheros.rapla.net *.linux-wless.passys.nl *.wifi-driver.com *.driverowl.com
+.includeos.org .linuxmisc.com *.coreboot.org *.bumblebee-project.org *.nosuck.org
+*.fontawesome.io *.rarlab.com *.pkgbuild.com *.www.lilotux.net *.linuxhowtos.org
+*.lwn.net
+
+## Android
+.osdn.jp .osdn.net .android-x86.org .source.android.com .android.googlesource.com
+
+## Arch HTTPS Linux mirrors
+# *.mirrors
+# *.status
+*.archlinux.lucysan.net *.f4st.host *.pkg.adfinis-sygroup.ch *.ftp.myrveln.se
+*.mirror.hactar.xyz *.mirror.neuf.no *.arch.nimukaito.net *.mirrors.dotsrc.org
+*.archlinux.vi-di.fr *.ftp.fau.de *.mirror.i3d.net *.ftp.lysator.liu.se
+### gd.tuwien.ac.at  delta.archlinux.fr foss.dhyrule.se
+
+# SSL certificate authorities
+*.digicert.com *.letsencrypt.org *.ocsp.omniroot.com *.ocsp.comodoca.com
+*.ocsp.entrust.net *.ocsp.quovadisglobal.com *.symcd.com *.symcb.com
+*.ocsp.comodoca4.com *.globalsign.com *.ocsp.usertrust.com *.ocsp.godaddy.com
+*.netdna-ssl.com *.ssl7.net *.ocsp-responder.com
+
+# CDN
+*.cloudfront.net *.r9cdn.net *.habracdn.net *.cdn.sstatic.net *.inmotionhosting.com
+*.cdn.inspectlet.com *.cdn.appdynamics.com *.cdn.hashflare.eu *.cdn.ywxi.net
+*.cdn.fancybar.net *.bootstrapcdn.com
+
+# Email
+*.tuta.io *.tutanota.de *.tutanota.com *.protonmail.ch *.protonmail.com
+*.getairmail.com *.10minutemail.com *.guerillamail.com *.dropmail.me
+*.protonirockerxow.onion *.mailfence.com *.bitmessage.ch *.bitmailendavkbec.onion
+*.sigaint.org *.sigaintevyh2rzvw.onion *.cock.li *.thesimplecomputer.info
+*.mailinator.com *.cockmailwwfvrtqj.onion *.securemail.hidemyass.com *.vmail.me
+*.vfemail.net *.344c6kbnjnljjzlz.onion *.zsolxunfmbfuq7wf.onion
+*.j6uhdvbhz74oefxf.onion *.openmailbox.org *.mailoo.org *.autistici.org *.r.mail.ru
+*.freemail.hu .mail2tor2zyjdctd.onion *.mail.yandex.ru *.yastatic.net
+*.passport.yandex.ru *.captcha.yandex.net *.pass.yandex.ru *.imap.yandex.ru
+*.smtp.yandex.ru *.pop.yandex.ru .tuffmail.com .runbox.com .shazzlemail.com
+.torguard.net .torbox3uiot6wchz.onion
+
+# WEB/WPS/WDS Hosting
+*.hetzner.de *.ntp2.hetzner.com *.ntp3.hetzner.net *.clients.your-server.de
+*.webhostingtalk.com
+
+# Banks, Buisness, Money
+# citibank seems to need google since 2017, see citibank.conf
+*.irs.gov
+*.citibank.com *.citi.com *.chase.com *.chasecreditcards.com *.statefarm.com
+*.chasecdn.com *.ac1.st8fm.com *.ac2.st8fm.com *.static2.st8fm.com
+*.static1.st8fm.com *.seal.entrust.net *.cdn.tt.omtrdc.net *.citicards.com
+*.cdn4.userzoom.com *.webmoney.ru *.wmtransfer.com *.paypal.com *.paypalobjects.com
+*.qiwi.ru *.perfectmoney.is *.money.yandex.ru *.money.yandex.net
+
+# Bitcoin
+*.bitcoin.org *.bitcoin.it *.nakamotoinstitute.org *.coin.dance *.bitcoinmagazine.com
+*.bitcointalk.org *.21.co *.blockchain.info *.blockr.io *.tradeblock.com
+*.blockcypher.com *.bitlox2twvzwbzpk.onion *.localbitcoins.com *.coinmap.org
+*.dashjr.org *.blockchainbdgpzk.onion
+
+# Travel
+*.expedia.com *.travel-assets.com *.images.trvl-media.com *.travelocity.com
+*.kayak.com *.justfly.com *.aa.com *.delta.com *.hotels.com *.united.com
+*.americanairlines.eu.amadeus.com *.tripadvisor.com *.mid.ru *.tonkosti.ru
+*.tumblr.com *.travel.ru *.globalsingapore.sg *.singapore-visa.sg *.gov.sg
+*.kbrimoskow.org *.consulate-atlanta.com *.embassyofindonesia.org
+*.summit-services.ca *.ss.symcd.com *.wikitravel.org *.airasia.com *.cartrawler.com
+*.airbnb.com *.skyscanner.com *.travelfish.org
+
+# Employement
+*.moikrug.ru *.careerride.com *.geekinterview.com
+
+## Tor
+*.www.torproject.org *.blog.torproject.org *.dist.torproject.org *.thehiddenwiki.org
+*.lists.torproject.org *.trac.torproject.org *.check.torproject.org
+*.gitweb.torproject.org *.git.torproject.org *.dccbbv6cooddgcrq.onion
+## I2P
+.geti2p.net *.i2p2.de *.i2p2.no *.i2p-projekt.de *.i2p.xyz *.i2p.to .i2p.me .i2p.us
+*.i2p.rocks *.i2p.mooo.com *.i2pmail.org
+
+# Shopping
+.bhphotovideo.com .newegg.com .amazon.com *.nvidia.com *.ibm.com
+*.alienware.com *.dell.com *.d-link.com *.dlink.com *.tp-link.com
+*.download.brother.com *.www.brother.com *.www8-hp.com *.hp.com *.intel.com
+
+# Chat/Messaging
+*.freenode.net *.irssi.org *.weechat.org *.dal.net *.efnet.org *.esper.net
+*.eu.irc6.net *.ircnet.net *.oftc.net *.rizon.net *.silcnet.org *.undernet.org
+*.irc.indymedia.org *.blah.im *.yax.im *.yaxim.org *.xmpp.net *.xmpp.org *.xmpp.jp
+*.jabber.org *.jabber.ru *.ekiga.org *.ekiga.im *.ekiga.net *.jabber.no
+.irclogger.com .viber.com *.dl.discordapp.net support.discordapp.com *.icq.com
+*.storage.icq.com *.messagenet.com *.voipdito.com *.voipstudio.com *.linphone.org
+.sipnet.ru .msgsafe.io .wire.com .downloads.asterisk.org .freeswitch.org .ppbbxx.com
+*.comtube.com
+## Skype
+*.skype.com *.r.skype.net *.messenger.live.com *.d.skype.net *.skypeassets.com
+*.i.s-microsoft.com *.auth.gfx.ms *.login.live.com *.account.live.com *.trouter.io
+*.browser.pipe.aria.microsoft.com
+
+# Torrent
+*.torrentfreak.com *.rutor.info *.x4torrentjjjjuxy.onion *.torrentproject.se
+*.skytorrents.in *.thepiratebay.org *.www.bittorrent.org .popcorntime.sh
+.opensubtitles.org .addic7ed.com .iknowwhatyoudownload.com
+
+## Torrent Trackers
+9.rarbg.com anisaishuu.de .torrentsmd.com bt.careland.com.cn bt.torrent.kg
+bttracker.crunchbanglinux.org bt.unionpeer.org .coppersurfer.tk .cpleft.com
+exodus.desync.com .explodie.org .freerutor.com .hdpicture.ru inferno.demonoid.me
+ipv4.tracker.harry.lu .mgtracker.org .pow7.com .pubt.net retracker.hotplug.ru
+retracker.kld.ru retracker.kld.ru torrents-nn.cn tracker1.wasabii.com.tw
+tracker5.infohash.org tracker.aletorrenty.pl tracker.best-torrents.net
+tracker.bittorrent.am tracker.btcake.com tracker.calculate.ru tracker.coppersurfer.tk
+.dutchtracking.com .dutchtracking.nl tracker.ex.ua tracker.glotorrents.com
+tracker.ilibr.org tracker.internetwarriors.net tracker.kris-ix.ru
+tracker.novalayer.org tracker.opentrackr.org tracker.pomf.se tracker.seedoff.net
+tracker.tfile.me tracker.torrentbay.to tracker.torrenty.org tracker.yify-torrents.com
+tracker.bashtel.ru www.matlik.cz tracker.dler.org p4p.arenabg.com tracker.skyts.net
+
+# Other
+*.s3.amazonaws.com
+*.leechcraft.org
+*.recode.net
+*.launchpad.net
+*.launchpadlibrarian.net
+*.coredump.cx
+*.bit.ly
+*.collabora.com
+*.gitlab.com
+*.flashboot.ru
+*.antspec.com
+*.commandlinefu.com
+*.wirelesshack.org
+*.drweb.ru
+*.insanitybit.com
+*.jackaudio.org
+*.sourceforge.net
+*.crunchbang.org
+*.auscert.org.au
+*.imgur.com
+*.ptpb.pw
+*.sprunge.us
+*.ix.io
+*.uj3wazyk5u4hnvtk.onion
+*.testnet67chdulhs.onion
+*.freenodeok2gncmy.onion
+*.dronebl.org
+*.download.xxlspeed.com
+*.lngserv.ru
+*.manas.ca
+*.immerda.ch
+*.redis.io
+*.kpvz7ki2v5agwt35.onion
+*.compress.googlezip.net
+*.proxy.googlezip.net
+*.wirama.web.id
+*.pastebin.com
+*.fri-gate.org
+*.anonymox.net
+*.dmoz.org
+*.01.org
+*.www.monkey.org
+*.atlassian.artifactoryonline.com
+*.chocolate-doom.org
+*.openstreetmap.org
+*.cgpsmapper.com
+*.hostmonster.com
+*.ersdac.or.jp
+*.renderdoc.org
+*.av.dfki.de
+*.jhenriques.net
+*.emtec.com
+*.libretro.com
+*.streamcomputing.eu
+*.mplayerhq.hu
+*.etalabs.net
+*.terminals-wiki.org
+*.bgp.nu
+*.codinghorror.com
+*.hivmr.com
+*.itfellover.com
+*.wonderhowto.com
+*.piratebox.aod-rpg.de
+*.daviddarts.com
+*.phoenixnetworks.net
+*.atheros.com
+*.madwifi-project.org
+*.madwifi.org
+*.dd-wrt.com
+*.fcc.gov
+*.kleinfelter.com
+*.beyondlogic.org
+*.tldp.org
+*.haifux.org
+*.malwaremustdie.org
+*.stapelberg.de
+*.howstuffworks.com
+*.hashcat.net
+*.wireshark.org
+*.lists.shorewall.net
+*.get.geo.opera.com
+*.3s3s.org
+*.files.ax86.net
+*.www.fantascienza.net
+*.unifoundry.com
+*.curl.haxx.se
+
+# for mozilla sources, firefox tries to talk to ftp.mozilla.org
+# ftp.mozilla.org
+*.wiki.mozilla.org
+*.blog.mozilla.org
+*.addons.mozilla.org
+*.addons.cdn.mozilla.net
+*.developer.mozilla.org
+
+*.symantec.com
+*.zinglau.com
+*.readthedocs.io
+
+# PDF
+*.ehacking.net
+*.guardianproject.info
+*.download.microsoft.com
+*.waterfoxproject.org
+*.cdn02.foxitsoftware.com
+*.www.foxitsoftware.com
+*.flpsed.org
+*.ardownload.adobe.com
+*.cdn01.foxitsoftware.com
+*.cdn03.foxitsoftware.com
+*.www.pdflabs.com
+*.www.pdfhacks.com
+*.repo.or.cz
+*.www.qtrac.eu
+*.mupdf.com
+*.getbootstrap.com
+*.cypherpunk.at
+*.git.xiph.org
+
+*.usafederalholidays.com
+*.timeanddate.com
+*.publicholidays.us
+
+*.njal.la
+*.download.jitsi.org
+*.gxamjbnu7uknahng.onion.nu
+*.zadarma.com
+*.spy-soft.net
+
+*.quora.com
+*.dandreamsofcoding.com
+*.robertelder.org
+*.toptal.com
+*.a4academics.com
+*.cses.fi
+*.cpbook.net
+*.sanfoundry.com
+*.e-maxx.ru
+*.quoracdn.net
+*.hh.com
+*.hh.ru
+
+*.skyhookwireless.com
+*.unbound.net
+*.hsc.fr
+*.simplednscrypt.org
+*.alexa.com
+*.similarweb.com
+
+*.1cloud.ru
+s0.wp.com
+tctechcrunch2011.files.wordpress.com
+.engadget.com
+.aolcdn.com
+.uservoice.com
+.lifewire.com
+.textfiles.com
+.winehq.org
+.openreputation.net
+.openbazaar.org
+.internic.net
+.duke.edu
+www.matroska.org
+www.wireguard.com
+www.zerotier.com
+en.wikiversity.org
+www.apenwarr.ca
+www.coursera.org
+www.gitbook.com
+.linux.die.net
+.btdig.com
+www.brynosaurus.com
+hackaday.com
+.s5o.ru
+.ietf.org
+.speakerdeck.com
+.synack.com
+.bash.im
+.bash.org
+.tcpcheck.com
+.open-std.org
+.wg21.link
+.eprint.iacr.org
+.arnor.org
+.nabble.com

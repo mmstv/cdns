@@ -1,0 +1,2 @@
+Name,"Full name","Description","Location","Coordinates",URL,Version,DNSSEC validation,No logs,Namecoin,Resolver address,Provider name,Provider public key,Provider public key TXT record
+2.dnscrypt-cert,"2.dnscrypt-cert","2.dnscrypt-cert","2.dnscrypt-cert","",https://baby.lon,1,no,yes,no,127.0.0.1:3053,2.dnscrypt-cert,BFA7:C101:B941:0A88:339D:42BA:38E1:0646:5B33:7384:9D6C:02D9:9FA6:E755:6A62:CB50,2.dnscrypt-cert

@@ -1,0 +1,18 @@
+# /usr/bin/astyle --options=.astylerc < file.in > file.out
+# In ~/.vimrc:
+#    autocmd FileType c,cpp :setlocal formatprg=astyle
+# In Vim normal mode format current line with:
+#    gql
+# to the end of file:
+#    gqG
+
+style=allman
+indent=force-tab=4
+indent-after-parens
+pad-first-paren-out
+pad-oper
+pad-comma
+unpad-paren
+max-code-length=84
+remove-braces
+delete-empty-lines

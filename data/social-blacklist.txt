@@ -1,0 +1,31 @@
+# Blacklist Facebook/Google/Mozilla and other social media
+
+facebookinc.122.2o7.net
+
+*.facebook.com
+*.facebook.net
+*.syndication.twitter.com
+*.platform.twitter.com
+*.fonts.gstatic.com
+*.linkedin.com
+*.fullstory.com
+*.brightcove.net
+*.brightcove.com
+*.sourcefire.com
+
+*.google-analytics.com
+*.googleapis.com
+*.apis.google.com
+*.googletagmanager.com
+*.googletagservices.com
+*.googleadservices.com
+*.googlesyndication.com
+*.googlepages.com
+*.google.com
+.google.fr
+.google.de
+*.google.net
+*.google.ru
+
+.mozilla.org .mozilla.com .mozilla.net .firefox.org .firefox.net .firefox.com
+.add.my.yahoo.com .30boxes.com

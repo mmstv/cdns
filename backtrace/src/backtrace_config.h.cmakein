@@ -1,0 +1,9 @@
+
+#cmakedefine HAVE_UNISTD_H
+#cmakedefine HAVE_CXXABI_H
+#cmakedefine HAVE_XMMINTRIN_H
+#cmakedefine HAVE_DBGHELP_LIB
+#cmakedefine HAVE_BACKTRACE
+#ifdef HAVE_BACKTRACE
+# include <${Backtrace_HEADER}>
+#endif

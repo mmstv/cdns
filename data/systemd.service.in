@@ -1,0 +1,48 @@
+[Unit]
+Description=@CPACK_PACKAGE_DESCRIPTION_SUMMARY@
+Documentation=man:@PROJECT_NAME@(8)
+Requires=@PROJECT_NAME@.socket
+After=network.target
+Before=nss-lookup.target
+ConditionPathExists=@CMAKE_INSTALL_FULL_LOCALSTATEDIR@/cache/@PROJECT_NAME@
+
+[Install]
+Also=@PROJECT_NAME@.socket
+WantedBy=multi-user.target
+
+[Service]
+Type=simple
+NonBlocking=true
+
+# Edit the configuration file appropriately, or the service will not start.
+# See https://@PROJECT_NAME@.no.such.site.org for more information.
+ExecStart=@CMAKE_INSTALL_FULL_SBINDIR@/@PROJECT_NAME@ @CMAKE_INSTALL_FULL_SYSCONFDIR@/@PROJECT_NAME@/@PROJECT_NAME@.conf
+ExecReload=/bin/kill -HUP $MAINPID
+
+# sandboxing
+###! @todo: Environment=TZ=UTC, is it really necessary?, time is not used by DNS?
+User=@PROJECT_NAME@
+UMask=0077
+MemoryDenyWriteExecute=true
+ProtectKernelTunables=true
+ProtectControlGroups=true
+CapabilityBoundingSet=
+# CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_RAW CAP_NET_BIND_SERVICE
+# CapabilityBoundingSet=CAP_SETUID CAP_SETGID
+NoNewPrivileges=yes
+ProtectSystem=full
+ProtectHome=true
+InaccessiblePaths=-/sys -/boot -/home -/var/mnt -/mnt -/opt -/etc/ssh -/var/spool
+InaccessiblePaths=-/etc/pacman.d -/etc/sudoers -/etc/iptables -/var/cache/pacman
+InaccessiblePaths=-/etc/machine-id -/etc/sysctl.d -/etc/sudoers.d -/etc/tor
+MountFlags=private
+DevicePolicy=closed
+PrivateDevices=yes
+
+SystemCallArchitectures=native
+SystemCallFilter=~ @mount @keyring @debug @clock @cpu-emulation @obsolete @module @raw-io
+SystemCallFilter=~ @ipc
+SystemCallFilter=~ @privileged
+# SystemCallFilter=~ @process
+# SystemCallFilter=~ @network-io
+# SystemCallFilter=~ @io-event

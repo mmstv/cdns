@@ -1,0 +1,7 @@
+## to use this file:
+## git config --local include.path '../.gitconfig'
+##   or:
+# git config --local
+#   core.whitespace=trailing-space,tabwidth=4,indent-with-non-tab,space-before-tab
+[core]
+	whitespace = trailing-space,tabwidth=4,indent-with-non-tab,space-before-tab

@@ -1,0 +1,15 @@
+* text=auto
+*.c text
+*.h text
+*.cpp text
+*.hpp text
+*.cxx text
+*.hxx text
+*.txt text
+*.m text
+*.mm text
+*.key -text
+*.cert -text
+dns/crypt/tests/data/public.key -text -diff
+dns/crypt/tests/data/crypt_secret.key -text -diff
+dns/crypt/tests/data/dnscrypt.cert -text -diff

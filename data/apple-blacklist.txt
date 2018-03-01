@@ -1,0 +1,7 @@
+### Apple Blacklist
+eth0.me data.iana.org
+
+*.apple.com----macupdate.co *.mac-services.apple.com *.support-sp.apple.com
+*.gsp1.apple.com *.smoot.apple.com *.pancake.apple.com
+*.apple-finance.query.yahoo.com *.radarsubmissions.apple.com *.push.apple.com
+*.apple.net

@@ -1,0 +1,12 @@
+# valgrind error suppression for Linux, produced with:
+#   `/usr/bin/valgrind  --gen-suppressions=all`
+# This error happens because of nullptr passed as sigmask to epoll_pwait by libev,
+# which is valid parameter in Linux
+{
+	<epoll_pwait_null_sigmask>
+	Memcheck:Param
+	epoll_pwait(sigmask)
+	fun:epoll_pwait
+	obj:/usr/lib/libev.so.4.0.0
+	fun:ev_run
+}

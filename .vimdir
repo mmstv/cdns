@@ -1,0 +1,8 @@
+" .vimdir
+" Set project settings for 'cpptools' and 'clang_complete' plug-ins
+
+setlocal textwidth=85 tabstop=4 shiftwidth=4 noexpandtab
+setlocal wildignore+=*.xz,*.gz,*.bz2,*.zip,*.swp
+
+" vi: set ts=4 sw=4:
+" vim: set noet tw=85 filetype=vim:

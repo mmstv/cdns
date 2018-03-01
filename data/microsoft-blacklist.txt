@@ -1,0 +1,10 @@
+# Blacklist Microsoft
+
+*.microsoft.com
+*.msftncsi.com
+*.msftncsi.com.edgesuite.net
+*.windowsupdate.com
+*.windows.com
+*.microsoft.akadns.net
+*.vo.msecnd.net
+*.bing.com

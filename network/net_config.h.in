@@ -1,0 +1,50 @@
+/* net_config.h.in  */
+
+#cmakedefine HAVE_WINSOCK2_H 1
+#cmakedefine HAVE_WS2TCPIP_H 1
+#cmakedefine HAVE_SYS_STAT_H 1
+
+/* Define to 1 if you have the <arpa/inet.h> header file. */
+#cmakedefine HAVE_ARPA_INET_H 1
+
+/* Define to 1 if you have the `fcntl' function. */
+#cmakedefine HAVE_FCNTL 1
+
+/* Define to 1 if you have the <fcntl.h> header file. */
+#cmakedefine HAVE_FCNTL_H 1
+
+/* Define to 1 if you have the `inet_ntop' function. */
+#cmakedefine HAVE_INET_NTOP 1
+
+/* Define to 1 if you have the `inet_pton' function. */
+#cmakedefine HAVE_INET_PTON 1
+
+/* Define if F_SETFD is defined in <fcntl.h> */
+#cmakedefine HAVE_SETFD 1
+
+/* Define to 1 if the system has the type `struct in6_addr'. */
+#cmakedefine HAVE_STRUCT_IN6_ADDR 1
+
+/* Define to 1 if the system has the type `struct sockaddr_in6'. */
+#cmakedefine HAVE_STRUCT_SOCKADDR_IN6 1
+
+/* Define to 1 if `sin6_len' is a member of `struct sockaddr_in6'. */
+#cmakedefine HAVE_STRUCT_SOCKADDR_IN6_SIN6_LEN 1
+
+/* Define to 1 if `sin_len' is a member of `struct sockaddr_in'. */
+#cmakedefine HAVE_STRUCT_SOCKADDR_IN_SIN_LEN 1
+
+/* Define to 1 if the system has the type `struct sockaddr_storage'. */
+#cmakedefine HAVE_STRUCT_SOCKADDR_STORAGE 1
+
+/* Define to 1 if `ss_family' is a member of `struct sockaddr_storage'. */
+#cmakedefine HAVE_STRUCT_SOCKADDR_STORAGE_SS_FAMILY 1
+
+/* Define to 1 if you have the <sys/ioctl.h> header file. */
+#cmakedefine HAVE_SYS_IOCTL_H 1
+
+/* Define to 1 if you have the <sys/socket.h> header file. */
+#cmakedefine HAVE_SYS_SOCKET_H 1
+
+/* Define to 1 if you have the <unistd.h> header file. */
+#cmakedefine HAVE_UNISTD_H 1

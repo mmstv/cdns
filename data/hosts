@@ -1,0 +1,15 @@
+#
+# /etc/hosts: sample static lookup table for host names
+#
+
+# <ip-address> <hostname.domain.org> <hostname>
+127.0.0.1   localhost.localdomain   localhost
+::1         localhost.localdomain   localhost
+
+255.255.255.255 broadcast
+224.0.0.1       nowhere
+
+### Russian torrents refer to non-existent local trackers
+0.0.0.0     retracker.local
+
+0.0.0.0     metrics.skype.com

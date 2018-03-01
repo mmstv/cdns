@@ -1,0 +1,28 @@
+_u=cdns
+_h=/
+export PATH=/usr/bin
+
+pre_install() {
+	getent passwd $_u &> /dev/null || {
+		echo "==> Creating $_u user"
+		useradd --system --user-group --home $_h --shell /usr/bin/nologin \
+			--comment 'Cryptographic DNS resolver' $_u
+	}
+	install --owner=$_u --group=$_u --mode=750 -p -d /var/cache/$_u
+}
+
+pre_upgrade() {
+	pre_install
+}
+
+post_remove() {
+	if getent passwd ${_u} &>/dev/null; then
+		echo -n "==> Removing ${_u} user"
+		userdel ${_u}
+	fi
+	if getent group ${_u} &>/dev/null; then
+		echo -n "==> Removing ${_u} group"
+		groupdel ${_u}
+	fi
+	rm -rf /var/cache/$_u
+}

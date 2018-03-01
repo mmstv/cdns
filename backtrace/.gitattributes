@@ -1,0 +1,6 @@
+* text=auto
+*.cpp text
+*.cxx text
+*.hxx text
+*.txt text
+*.json text

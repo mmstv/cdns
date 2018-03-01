@@ -1,0 +1,90 @@
+# @CMAKE_INSTALL_FULL_SYSCONFDIR@/@PROJECT_NAME@/@PROJECT_NAME@.conf
+
+# Directory to store cache
+# CacheDir @CMAKE_INSTALL_FULL_LOCALSTATEDIR@/cache/@PROJECT_NAME@
+
+## Full path to the list of available DNSCrypt resolvers (dnscrypt-resolvers.csv)
+## An up-to-date list is available here:
+## https://download.dnscrypt.org/dnscrypt-proxy/dnscrypt-resolvers.csv
+# CryptResolvers @CMAKE_INSTALL_FULL_DATADIR@/@PROJECT_NAME@/dnscrypt-resolvers.csv
+
+# Usual NON-encrypting DNS resolvers
+# ResolversList @CMAKE_INSTALL_FULL_DATADIR@/@PROJECT_NAME@/dns-resolvers.txt
+
+## Run the proxy as a background process.
+Daemonize no
+
+## [NOT AVAILABLE ON WINDOWS] Start the process, bind the required ports, and
+## run the server as a less-privileged system user.
+## The value for this parameter is a user name.  Not needed if set in
+##   @CMAKE_INSTALL_FULL_LIBDIR@/systemd/system/@PROJECT_NAME@.service
+
+## Change user after binding sockets
+# User @PROJECT_NAME@
+
+## Local address and port to listen to.
+## If the socket is created by systemd, the proxy cannot change the address
+## using this option. You should edit systemd's
+## @CMAKE_INSTALL_FULL_LIBDIR@/systemd/system/@PROJECT_NAME@.socket file instead.
+# LocalAddress 127.0.0.1:53
+
+## Cache DNS responses for at least 600 seconds
+min-ttl 600
+
+
+# Time out for all queries in seconds
+TimeOut 10
+
+## Creates a new key pair for every query.
+EphemeralKeys on
+
+## Do not send queries using UDP. Only use TCP.
+# TCPOnly no
+
+# Forward .onion/.exit hosts to Tor DNS resolver
+Onion 127.0.0.1:5353
+
+## Log file to write server errors and information to.
+# LogFile @CMAKE_INSTALL_FULL_LOCALSTATEDIR@/log/@PROJECT_NAME@.log
+
+
+## Don't log events with priority above this log level.
+## Valid values are between 0 (critical) to 8 (debug-level messages).
+LogLevel 6
+
+
+## [NOT AVAILABLE ON WINDOWS] Send server logs to the syslog daemon
+Syslog       on
+
+
+## Disable IPv6 requests if your network does not support IPv6
+# noIPv6 off
+
+
+## Block query names matching the rules stored in that file:
+
+# Ads, telemetry, tracking
+# BlackList @CMAKE_INSTALL_FULL_DATADIR@/@PROJECT_NAME@/blacklist.txt
+
+# Custom system blacklist
+BlackList @CMAKE_INSTALL_FULL_SYSCONFDIR@/@PROJECT_NAME@/blacklist.txt
+
+# Facebook/Google/LinkedIn/Mozilla and other social media
+# BlackList @CMAKE_INSTALL_FULL_DATADIR@/@PROJECT_NAME@/social-blacklist.txt
+
+# Microsoft
+# BlackList @CMAKE_INSTALL_FULL_DATADIR@/@PROJECT_NAME@/microsoft-blacklist.txt
+
+# Apple
+# BlackList @CMAKE_INSTALL_FULL_DATADIR@/@PROJECT_NAME@/apple-blacklist.txt
+
+# Very restrictive default whitelist. WARNING: most sites are incaccessible
+# if this whitelist is enabled
+# WhiteList @CMAKE_INSTALL_FULL_DATADIR@/@PROJECT_NAME@/whitelist.txt
+
+# Custom system whitelist
+WhiteList @CMAKE_INSTALL_FULL_SYSCONFDIR@/@PROJECT_NAME@/whitelist.txt
+
+
+## Use a client public key for identification.
+# ClientKey @CMAKE_INSTALL_FULL_SYSCONFDIR@/@PROJECT_NAME@/client-secret.key
